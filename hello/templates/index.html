@@ -39,10 +39,21 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+          <h1 class="mb-5">This needs to be video explaining product</h1>
         </div>
+        <div class="iframe-container">
+          <!--iframe link is the link to the jsfiddle-->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/a-au1Cyr8ms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <style>
+          .iframe-container {
+            text-align:center;
+              width:100%;
+          }
+        </style>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
+          <p>Sign up for our newsletter to get latest updates</p>
+          <form id = "subscribe" form method = 'POST'>{% csrf_token %}
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
                 <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">

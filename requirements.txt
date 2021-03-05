@@ -1,3 +1,5 @@
 django
 gunicorn
 django-heroku
+mailchimp_marketing
+facebookads

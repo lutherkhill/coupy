@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
+from pathlib import Path
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "hello",
     "photoStorage.apps.PhotostorageConfig",
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -113,10 +115,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+BASE_DIRS = Path(__file__).resolve().parent.parent
 STATIC_URL = "/static/"
 MEDIA_URL = '/images/'
-STATICFILES_DIRS = BASE_DIR / 'static'
+#STATICFILES_DIRS = BASE_DIRS / 'static' #causes type error str:str
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
